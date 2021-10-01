@@ -63,9 +63,4 @@ public class ApolloEurekaClientConfig extends EurekaClientConfigBean {
         refreshScope.refresh(EUREKA_CLIENT_BEAN_NAME);
     }
   }
-
-  @Override
-  public boolean equals(Object o) {
-    return super.equals(o);
-  }
 }

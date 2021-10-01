@@ -50,7 +50,7 @@ public class AppOpenApiService extends AbstractOpenApiService implements
     try (CloseableHttpResponse response = get(pathBuilder)) {
       return gson.fromJson(EntityUtils.toString(response.getEntity()), OPEN_ENV_CLUSTER_DTO_LIST_TYPE);
     } catch (Throwable ex) {
-      throw new RuntimeException(String.format("Load env cluster information for appId: %s failed", appId), ex);
+      throw new GetClusterException(String.format("Load env cluster information for appId: %s failed", appId), ex);
     }
   }
 
